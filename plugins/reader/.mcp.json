@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "codex-markdown-reader": {
+      "type": "stdio",
+      "command": "/bin/sh",
+      "args": [
+        "./launch.sh"
+      ],
+      "cwd": "./"
+    }
+  }
+}

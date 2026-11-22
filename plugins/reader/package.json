@@ -1,0 +1,29 @@
+{
+  "name": "codex-markdown-reader",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "1.7.5",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@openai/mcp-extensions": "0.2.1",
+    "dompurify": "3.4.18",
+    "github-slugger": "2.0.0",
+    "marked": "18.2.1",
+    "zod": "4.6.7"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "overrides": {
+    "zod": "$zod",
+    "@hono/node-server": "2.1.3"
+  }
+}
