@@ -1,0 +1,86 @@
+.cm-editor[data-codex-tweaks-markdown-reader] {
+  --ct-md-border: color-mix(in srgb, currentColor 21%, transparent);
+  --ct-md-grid: color-mix(in srgb, currentColor 14%, transparent);
+  --ct-md-header: color-mix(in srgb, currentColor 7%, transparent);
+  --ct-md-stripe: color-mix(in srgb, currentColor 2.5%, transparent);
+  --ct-md-strong-weight: 900;
+  --ct-md-strong-stroke: 0.38px;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] > .cm-scroller > .cm-content {
+  font-weight: 400;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-content > .cm-line:not(.cm-markdown-code-line, .cm-markdown-table-row, .cm-markdown-table-separator, .cm-markdown-horizontal-rule) {
+  line-height: 1.5;
+  padding-block: 1px;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-content > .cm-line.cm-markdown-list-item {
+  line-height: 1.4;
+}
+
+/* CodeMirror preserves each source blank line as a line containing only a break. */
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-content > .cm-line:has(> br:only-child):not(.cm-activeLine, .cm-markdown-code-line, .cm-markdown-table-row, .cm-markdown-table-separator, .cm-markdown-horizontal-rule) {
+  line-height: 0.75;
+  padding-block: 0;
+}
+
+/* The document title sits at the top. Later chapter and section titles get their own space. */
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-content > .cm-line:not(:first-child):has(.file-editor-heading-1, .file-editor-heading-2) {
+  padding-block-start: 0.65em;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-content > .cm-line:not(:first-child):has(.file-editor-heading-3) {
+  padding-block-start: 0.45em;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-line :is(strong, b) {
+  font-weight: var(--ct-md-strong-weight);
+  -webkit-text-stroke: var(--ct-md-strong-stroke) currentColor;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .file-editor-heading {
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-line.cm-markdown-table-row {
+  box-sizing: border-box;
+  border: 1px solid var(--ct-md-border);
+  border-block-start: 0;
+  align-items: stretch;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-line.cm-markdown-table-header {
+  border-block-start: 1px solid var(--ct-md-border);
+  border-start-start-radius: 5px;
+  border-start-end-radius: 5px;
+  background-color: var(--ct-md-header);
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-markdown-table-row:not(:has(+ .cm-markdown-table-row, + .cm-markdown-table-separator + .cm-markdown-table-row)) {
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-markdown-table-row:not(.cm-markdown-table-header):nth-child(even of .cm-markdown-table-row) {
+  background-color: var(--ct-md-stripe);
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-markdown-table-row > .cm-markdown-table-cell {
+  box-sizing: border-box;
+  padding: 7px clamp(4px, 1vw, 12px);
+  min-inline-size: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.52;
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-markdown-table-row > .cm-markdown-table-cell ~ .cm-markdown-table-cell {
+  border-inline-start: 1px solid var(--ct-md-grid);
+}
+
+.cm-editor[data-codex-tweaks-markdown-reader] .cm-markdown-table-header > .cm-markdown-table-cell {
+  font-weight: 700;
+}

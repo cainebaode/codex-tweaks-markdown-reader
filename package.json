@@ -1,0 +1,25 @@
+{
+  "name": "ct-markdown-reader",
+  "version": "0.1.1",
+  "description": "改善 Codex Markdown 文件预览的段落间距、表格布局、标题与行内加粗。",
+  "type": "module",
+  "codexTweaks": {
+    "apiVersion": 3,
+    "entrypoints": {
+      "renderer": "index.js"
+    },
+    "priority": 100,
+    "packageDependencies": {}
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cainebaode/codex-tweaks-markdown-reader.git"
+  },
+  "homepage": "https://github.com/cainebaode/codex-tweaks-markdown-reader",
+  "keywords": [
+    "codex-tweaks-package",
+    "codex-tweaks-layout",
+    "markdown"
+  ],
+  "license": "MIT"
+}
