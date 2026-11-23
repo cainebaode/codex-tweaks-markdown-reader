@@ -2,6 +2,8 @@
 
 Codex Tweaks 功能包，改善 Codex 桌面端 Markdown 文件预览的表格、文字和间距。
 
+功能包增强 Codex 内置查看器，保留带行号的文件跳转和原生批注。批注可随下一条对话发送。
+
 ## 功能
 
 - 表格按内容确定宽度，短标签列收紧，长说明自动换行，同一表格各行对齐。窄窗口中表格随可用空间收缩。
@@ -14,6 +16,8 @@ Codex Tweaks 功能包，改善 Codex 桌面端 Markdown 文件预览的表格�
 - Codex 桌面端。当前实现依据本机 ChatGPT 26.1117.41037 的 CodeMirror 文件预览结构适配。
 
 ## 安装
+
+如果曾安装本仓库的独立「Markdown 阅读器」，在 Codex 的「设置 → 查看器 → 文件」中将 `.md` 设为「内置」，并在插件页卸载独立阅读器。
 
 1. 在 Codex Tweaks 的「功能包」页面选择「从 Git 安装」，输入本仓库地址 `https://github.com/cainebaode/codex-tweaks-markdown-reader.git`，并按提示选择版本或分支。
 2. 安装后编译并启用 `ct-markdown-reader`。新安装的功能包默认停用。
